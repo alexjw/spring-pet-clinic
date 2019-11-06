@@ -21,6 +21,12 @@ public abstract class AbstractMapService<T extends BaseEntity, ID> implements Cr
         return map.get(id);
     }
 
+    @Override
+    public T save(T object) {
+        map.put((ID) object.getId(), object);
+        return object;
+    }
+
     public T save(ID id, T object) {
         map.put(id, object);
         return object;
