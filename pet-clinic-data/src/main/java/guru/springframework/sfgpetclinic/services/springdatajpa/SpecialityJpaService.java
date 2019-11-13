@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
-@Profile("springdatajpa")
+@Profile("jpa")
 public class SpecialityJpaService extends AbstractJpaService<Speciality, SpecialityRepository, Long> implements SpecialityService {
 
     public SpecialityJpaService(SpecialityRepository specialityRepository) {

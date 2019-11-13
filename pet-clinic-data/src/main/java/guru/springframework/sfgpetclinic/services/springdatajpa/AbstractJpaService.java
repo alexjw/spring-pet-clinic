@@ -3,6 +3,7 @@ package guru.springframework.sfgpetclinic.services.springdatajpa;
 import guru.springframework.sfgpetclinic.model.BaseEntity;
 import guru.springframework.sfgpetclinic.services.CrudService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.HashSet;
@@ -14,6 +15,7 @@ public abstract class AbstractJpaService<T extends BaseEntity, R extends CrudRep
 
     public AbstractJpaService(R r) {
         this.r = r;
+        System.out.println("JPA Service was called");
     }
 
     @Override

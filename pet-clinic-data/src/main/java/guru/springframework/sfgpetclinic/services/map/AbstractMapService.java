@@ -2,13 +2,19 @@ package guru.springframework.sfgpetclinic.services.map;
 
 import guru.springframework.sfgpetclinic.model.BaseEntity;
 import guru.springframework.sfgpetclinic.services.CrudService;
+import org.springframework.context.annotation.Profile;
 
 import java.util.*;
 
 // Done Better than the course
+@Profile({"default", "map"})
 public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> implements CrudService<T, ID> {
 
     protected Map<ID, T> map = new HashMap<>();
+
+    public AbstractMapService() {
+        System.out.println("Map Service was called");
+    }
 
     public Set<T> findAll() {
         return new HashSet<>(map.values());
