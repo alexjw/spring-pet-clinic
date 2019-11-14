@@ -1,10 +1,17 @@
 package guru.springframework.sfgpetclinic.model;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Table(name = "owners")
 public class Owner extends Person {
 
@@ -16,13 +23,9 @@ public class Owner extends Person {
     private String phone;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
-    private Set<Pet> pets;
+    private Set<Pet> pets = new HashSet<>();
 
-    public Owner() {
-        pets = new HashSet<>();
-    }
-
-    public String getAddress() {
+    /*public String getAddress() {
         return address;
     }
 
@@ -53,5 +56,5 @@ public class Owner extends Person {
 
     public void setPets(Set<Pet> pets) {
         this.pets = pets;
-    }
+    }*/
 }
