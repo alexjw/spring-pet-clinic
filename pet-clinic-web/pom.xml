@@ -84,6 +84,12 @@
             <artifactId>bootstrap</artifactId>
             <version>${webjars-bootstrap.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>2.22.0</version>
+            <scope>test</scope>
+        </dependency> <!-- Missing 193 guru -->
         <!-- end of webjars -->
 
     </dependencies>
