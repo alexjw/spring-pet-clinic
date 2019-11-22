@@ -1,4 +1,7 @@
 # sfg-pet-clinic
+
+[![CircleCI](https://circleci.com/gh/alexjw/spring-pet-clinic/tree/master.svg?style=svg)](https://circleci.com/gh/alexjw/spring-pet-clinic/tree/master)
+
 SFG Pet Clinic
 
 Started the project from:
